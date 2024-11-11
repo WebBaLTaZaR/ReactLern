@@ -1,20 +1,13 @@
 import "./App.css";
+import Counter from "./components/sem2/Task1";
+import TextInput from "./components/sem2/TextInput";
 
 function App() {
   return (
-    <div className="appJs">
-      <Message sms="Привет! Как дела?" />
-      <Message sms="Привет! Хорошо, у тебя как?" />
-      <Message sms="Привет! Хорошо, и да, я установил панель разработчика для Реакта!" />
-    </div>
+    <>
+      <Counter />
+      <TextInput />
+    </>
   );
 }
-
 export default App;
-function Message({ sms }) {
-  return (
-    <div>
-      <h1> Сообщение: {sms} </h1>
-    </div>
-  );
-}
