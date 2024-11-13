@@ -1,0 +1,15 @@
+.content {
+	padding: 20px;
+	border-radius: 10px;
+	transition: all 0.3s;
+}
+
+.light {
+	background-color: #f0f0f0;
+	color: #000;
+}
+
+.dark {
+	background-color: #333;
+	color: #fff;
+}

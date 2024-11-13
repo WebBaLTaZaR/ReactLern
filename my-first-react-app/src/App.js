@@ -1,9 +1,9 @@
 import "./App.css";
-import TodoList from "./components/sem2/TodoList";
 import Counter from "./components/sem3/Counter";
 import Greeting from "./components/sem3/Greeting";
 import MessagesList from "./components/sem3/MessagesList";
 import TextDisplayForm from "./components/sem3/TextDisplayForm";
+import ThemeSwitcher from "./components/sem3/ThemeSwitcher";
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
       <Counter />
       <MessagesList />
       <TextDisplayForm />
+      <ThemeSwitcher/>
     </>
   );
 }
