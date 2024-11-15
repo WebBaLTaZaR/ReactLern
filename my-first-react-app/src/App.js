@@ -1,12 +1,12 @@
 import "./App.css";
-import TemperatureConverter from "./components/sem3/homeWork/TemperatureConverter";
-import TodoListUI from "./components/sem3/homeWork/TodoListUI";
-
+import Box from "./components/sem4/Box";
 function App() {
   return (
     <>
-      <TemperatureConverter />
-      <TodoListUI />
+      <Box>
+        <h1>этот тег находится в Боксе</h1>
+        <button>кнопка</button>
+      </Box>
     </>
   );
 }
