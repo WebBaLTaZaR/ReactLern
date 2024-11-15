@@ -1,15 +1,17 @@
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import Box from "./components/sem4/Box";
-import List from "./components/sem4/list";
+import AboutPage from "./components/sem4/AboutPage";
+import HomePage from "./components/sem4/HomePage";
+import NotFound from "./components/sem4/NotFound";
 
 function App() {
   return (
     <>
-      <Box>
-        <h1>этот тег находится в Боксе</h1>
-        <button>кнопка</button>
-      </Box>
-      <List render={(item) => <span>{item}</span>} />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="*" element={<NotFound />} /> {/* Страница 404 */}
+      </Routes>
     </>
   );
 }
