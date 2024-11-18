@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import AboutPage from "./components/sem4/AboutPage";
-import HomePage from "./components/sem4/HomePage";
+import AboutPage from "./components/sem4/homeWork/AboutPage";
+import HomePage from "./components/sem4/homeWork/HomePage";
 import NotFound from "./components/sem4/NotFound";
 import ListPage from "./components/sem4/ListPage";
 import DetailPage from "./components/sem4/DetailPage";

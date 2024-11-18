@@ -8,6 +8,7 @@ function ListPage({list}) {
 			<Link to={`/detail/${fruit.id}`}  >{fruit.name}</Link>
 		</div>
 	))}
+	<Link to="/">На главную страницу</Link>
 	</> );
 }
 
