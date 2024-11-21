@@ -1,27 +1,26 @@
-import { Routes, Route } from "react-router-dom";
+import { useEffect, useState } from "react";
 import "./App.css";
-import AboutPage from "./components/sem4/homeWork/AboutPage";
-import HomePage from "./components/sem4/homeWork/HomePage";
-import NotFound from "./components/sem4/NotFound";
-import ListPage from "./components/sem4/ListPage";
-import DetailPage from "./components/sem4/DetailPage";
+import Footer from "./components/sem5/Footer";
+import Header from "./components/sem5/Header";
+import Profile from "./components/sem5/Profile";
+import { ThemeContext } from "./components/sem5/contexts/ThemeContext";
+import { UserContext } from "./components/sem5/contexts/UserContext";
 
 function App() {
-  const list = [
-    { id: 1, name: "apple", description: "Fresh and juicy apple" },
-    { id: 2, name: "banana", description: "Sweet and ripe banana" },
-    { id: 3, name: "orange", description: "Citrus and vitamin-rich orange" },
-    { id: 4, name: "lemon", description: "Sour and tangy lemon" },
-  ];
+  const [theme, setTheme] = useState("light");
+  const [user, setUser] = useState("BalTazaR");
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
   return (
     <>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/list" element={<ListPage list={list} />} />
-        <Route path="/detail/:id" element={<DetailPage list={list} />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <ThemeContext.Provider value={{ theme, toggleTheme }}>
+        <UserContext.Provider value={{ user, setUser }}>
+          <Header />
+          <Profile />
+          <Footer />
+        </UserContext.Provider>
+      </ThemeContext.Provider>
     </>
   );
 }
