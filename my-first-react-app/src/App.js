@@ -1,18 +1,13 @@
 import "./App.css";
-import withLoadingIndicator from "./components/sem5/withLoadingIndicator";
-import UserList from "./components/sem5/UserList";
-const UserListWithLoading = withLoadingIndicator(UserList);
-export default function App() {
-  const users = [
-    { id: 1, name: "Иван" },
-    { id: 2, name: "Мария" },
-  ];
-  const isLoading = false;
-
+import { Provider } from "react-redux";
+import store from "./components/sem5/homeWork/redux/store";
+import ThemeSwitcher from "./components/sem5/homeWork/ThemeSwitcher";
+function App() {
   return (
-    <div>
-      <h1>Список пользователей</h1>
-      <UserListWithLoading isLoading={isLoading} users={users} />
-    </div>
+    <Provider store={store}>
+      <ThemeSwitcher />
+    </Provider>
   );
 }
+
+export default App;
