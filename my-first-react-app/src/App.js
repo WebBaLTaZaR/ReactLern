@@ -1,11 +1,15 @@
 import "./App.css";
 import { Provider } from "react-redux";
-import store from "./components/sem5/homeWork/redux/store";
-import ThemeSwitcher from "./components/sem5/homeWork/ThemeSwitcher";
+import store from "./components/sem6/homeWork/redux/store";
+import AddProduct from "./components/sem6/homeWork/components/AddProduct";
+import ShowProduct from "./components/sem6/homeWork/components/ShowProduct";
 function App() {
   return (
     <Provider store={store}>
-      <ThemeSwitcher />
+      <div>
+        <AddProduct />
+        <ShowProduct />
+      </div>
     </Provider>
   );
 }
