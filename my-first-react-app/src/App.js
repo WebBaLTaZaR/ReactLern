@@ -1,14 +1,13 @@
 import "./App.css";
+import store from './components/sem7/homeWork/redux/store';
 import { Provider } from "react-redux";
-import store from "./components/sem6/homeWork/redux/store";
-import AddProduct from "./components/sem6/homeWork/components/AddProduct";
-import ShowProduct from "./components/sem6/homeWork/components/ShowProduct";
+import TasksList from "./components/sem7/homeWork/components/TasksList";
 function App() {
   return (
     <Provider store={store}>
       <div>
-        <AddProduct />
-        <ShowProduct />
+        <h1>Список задач</h1>
+        <TasksList />
       </div>
     </Provider>
   );
